@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-bullet-point',
@@ -8,14 +8,14 @@ import { Component, Input } from '@angular/core';
   templateUrl: './bullet-point.component.html',
   styleUrl: './bullet-point.component.css'
 })
-export class BulletPointComponent {
+export class BulletPointComponent implements OnChanges {
   @Input() public title: string = '';
   @Input() public info: string = '';
-  public arrowIcon: string = '&#8594;';
+  @Input() public arrowIcon: string = '&#8594;';
   public display: boolean = false;
 
-  onTitleClicked() {
-    this.arrowIcon = this.arrowIcon == '&#8594;' ? '&#8595;' : '&#8594;';
-    this.display = !this.display;
+  ngOnChanges(changes: SimpleChanges): void {
+    this.arrowIcon = changes['arrowIcon'].currentValue;
+    this.display = changes['arrowIcon'].currentValue === '&#8595;';
   }
 }
