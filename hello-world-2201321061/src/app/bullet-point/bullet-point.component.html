@@ -1,0 +1,6 @@
+<div (click)="onTitleClicked()">
+    <div class="arrowButton"><span [innerHTML]="arrowIcon"></span></div>
+    <div class="title">{{title}}</div>
+</div>
+
+<div class="info" *ngIf="display">{{info}}</div>

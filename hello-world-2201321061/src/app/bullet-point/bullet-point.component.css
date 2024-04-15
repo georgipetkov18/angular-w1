@@ -1,0 +1,18 @@
+div {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.arrowButton {
+    width: 35px;
+    padding: 4px;
+    background-color: lightblue;
+    border-radius: 7px;
+    text-align: center;
+    margin-right: 5px;
+    float: left;
+}
+
+.info, .title {
+    padding: 4px;
+}
