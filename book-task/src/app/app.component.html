@@ -1,0 +1,16 @@
+<div><strong>Заглавие: </strong>{{books[index].title}}</div>
+<div><strong>Автор: </strong>{{books[index].author}}</div>
+<div><strong>Описание: </strong>{{books[index].description}}</div>
+<div><strong>Рейтинг: </strong>{{books[index].rating || 'Все още няма зададен рейтинг'}}</div>
+<br>
+
+<div class="rating">
+  <button (click)="rateBook($event)">1</button>
+  <button (click)="rateBook($event)">2</button>
+  <button (click)="rateBook($event)">3</button>
+  <button (click)="rateBook($event)">4</button>
+  <button (click)="rateBook($event)">5</button>
+</div>
+<br>
+
+<button (click)="displayNextBook()">Запази</button>

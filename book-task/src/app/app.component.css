@@ -1,0 +1,15 @@
+.rating {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating button {
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+}
+
+button.rating-choice.chosen {
+    background-color: bisque;
+}
