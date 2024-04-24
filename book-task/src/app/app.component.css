@@ -13,3 +13,26 @@
 button.rating-choice.chosen {
     background-color: bisque;
 }
+
+input {
+    margin-left: 10px;
+}
+
+body {
+    font-size: 20px;
+}
+
+.end-buttons {
+    display: block;
+    background-color: transparent;
+    margin: 30px;
+    font-size: 20px;
+    text-align: center;
+    width: 250px;
+}
+
+.main-section, .end-section, .finished-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
