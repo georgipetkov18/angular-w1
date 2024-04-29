@@ -1,0 +1,8 @@
+.note-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.note-content input, .note-content textarea {
+    margin-bottom: 20px;
+}

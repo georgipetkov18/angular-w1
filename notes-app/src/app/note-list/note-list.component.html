@@ -1,0 +1,3 @@
+@for (note of noteList; track $index) {
+    <app-note-summary [note]="note" (click)="onNoteSelected(note)"></app-note-summary>
+}

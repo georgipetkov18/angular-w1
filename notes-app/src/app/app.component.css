@@ -1,0 +1,11 @@
+main div {
+    display: inline-block;
+}
+
+.left {
+    width: 60%;
+}
+
+.right { 
+    width: 40%;
+}
