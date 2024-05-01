@@ -1,5 +1,6 @@
-main div {
-    display: inline-block;
+.app-container {
+    display: flex;
+    justify-content: space-between;
 }
 
 .left {

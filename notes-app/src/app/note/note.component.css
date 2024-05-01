@@ -1,8 +1,21 @@
 .note-content {
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
 }
 
-.note-content input, .note-content textarea {
+.form-el {
     margin-bottom: 20px;
+}
+.form-el input, .form-el textarea {
+    width: 100%;
+}
+
+.error {
+    color: red;
+}
+
+.error-bord, .error-bord:focus {
+    outline: 1px solid red;
+    border: 1px solid red;
 }

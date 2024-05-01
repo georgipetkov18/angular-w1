@@ -21,6 +21,9 @@ export class NoteComponent implements OnChanges, OnDestroy {
   }
 
   public saveNote() {
+    if (this.title.length < 5 || this.content.length < 7) {
+      return;
+    }
     this.note.title = this.title;
     this.note.content = this.content;
     this.onNoteSaved.emit(this.note);

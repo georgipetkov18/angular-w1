@@ -1,7 +1,17 @@
 <div class="note-content">
-    <input type="text" placeholder="Заглавие на бележката" [(ngModel)]="title">
+    <div class="form-el">
+        <input type="text" placeholder="Заглавие на бележката" [(ngModel)]="title" [classList]="title && title.length < 5 ? 'error-bord' : ''">
+        @if (title && title.length < 5) {
+            <p class="error">Заглавието трябва да съдържа поне 5 символа</p>
+        }
+    </div>
 
-    <textarea name="content" id="content" cols="20" rows="7" placeholder="Съдържание на бележката" [(ngModel)]="content"></textarea>
-
+    <div class="form-el">
+        <textarea name="content" id="content" cols="20" rows="7" placeholder="Съдържание на бележката" [(ngModel)]="content" [classList]="content && content.length < 7 ? 'error-bord' : ''"></textarea>
+        @if (content && content.length < 7) {
+            <p class="error">Съдържанието трябва да съдържа поне 7 символа</p>
+        }
+    </div>
+    
     <button (click)="saveNote()">Съхрани бележката</button>
 </div>

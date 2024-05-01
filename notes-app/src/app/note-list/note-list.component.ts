@@ -17,6 +17,10 @@ export class NoteListComponent implements OnDestroy{
     this.noteSelected.emit(note);
   }
 
+  public onNoteDeleted(index: number) {
+    this.noteList.splice(index, 1);
+  }
+
   ngOnDestroy(): void {
     this.noteSelected.unsubscribe();
   }
