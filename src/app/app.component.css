@@ -1,0 +1,10 @@
+.vertical-traffic-lights-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 100px;
+}
+
+.horizontal-light {
+    display: flex;
+    justify-content: center;
+}

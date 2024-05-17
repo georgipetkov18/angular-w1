@@ -1,0 +1,84 @@
+.container-horizontal {
+    display: flex;
+}
+
+.container-vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-horizontal-reversed {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.container-vertical-reversed {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.traffic-light-container-horizontal {
+    outline: 2px solid red;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    width: 300px;
+}
+
+.traffic-light-container-vertical {
+    outline: 2px solid red;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 300px;
+    width: 70px;
+    flex-direction: column;
+}
+
+.light {
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+.red-light-on {
+    background-color: red;
+}
+
+.red-light-off {
+    outline: 2px solid red;
+}
+
+.yellow-light-on {
+    background-color: rgb(230, 230, 32);
+}
+
+.yellow-light-off {
+    outline: 2px solid rgb(230, 230, 32);
+}
+
+.green-light-on {
+    background-color: green;
+}
+
+.green-light-off {
+    outline: 2px solid green;
+}
+
+.cross-btn {
+    color: orange;
+    outline: 2px solid orange;
+    border: none;
+    background-color: transparent;
+    height: 70px;
+    cursor: pointer;
+}
+
+.cross-btn-h {
+    margin: 0px 10px;
+}
+
+.cross-btn-v {
+    margin: 10px 0px;
+}
