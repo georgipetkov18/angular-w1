@@ -4,6 +4,7 @@
 
 <div class="vertical-traffic-lights-container">
     <app-traffic-light [isHorizontal]="false" [light]="verticalLight" [reversed]="true"></app-traffic-light>
+    <button class="emergency-btn" (click)="onEmergencyBtnClick()" [disabled]="emergencyBtnIsDisabled">Авария</button>
     <app-traffic-light [isHorizontal]="false" [light]="verticalLight"></app-traffic-light>
 </div>
 

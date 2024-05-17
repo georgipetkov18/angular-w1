@@ -75,6 +75,11 @@
     cursor: pointer;
 }
 
+.cross-btn:disabled {
+    cursor: default;
+    opacity: 0.5;
+}
+
 .cross-btn-h {
     margin: 0px 10px;
 }
