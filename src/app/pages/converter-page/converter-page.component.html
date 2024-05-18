@@ -1,1 +1,23 @@
-<p>converter-page works!</p>
+<form #currencyForm="ngForm" (ngSubmit)="onSubmit()">
+    <label for="curr-from">From: </label>
+    <select name="from" id="curr-from" [(ngModel)]="from">
+        @for (item of currencies; track $index) {
+            <option>{{item.code}} - {{item.name}}</option>
+        }
+    </select>
+
+    <label for="curr-to">To: </label>
+    <select name="to" id="curr-to" [(ngModel)]="to">
+        @for (item of currencies; track $index) {
+            <option>{{item.code}} - {{item.name}}</option>
+        }
+    </select>
+
+    <label for="amount">Amount: </label>
+    <input name="amount" id="amount" type="number" [(ngModel)]="amount">
+
+    <button type="submit">Convert</button>
+</form>
+@if (convertedResult) {
+    <div class="result">Result: {{convertedResult}}</div>
+}

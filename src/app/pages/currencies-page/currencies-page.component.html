@@ -3,14 +3,16 @@
         <tr>
             <th>Code</th>
             <th>Name</th>
+            <th></th>
         </tr>
     </thead>
 
     <tbody>
         @for (item of currencies; track $index) {
             <tr>
-                <td>{{item[0]}}</td>
-                <td>{{item[1]}}</td>
+                <td>{{item.code}}</td>
+                <td>{{item.name}}</td>
+                <td><button (click)="navigateToRates(item.code)">Check Rates</button></td>
             </tr>
         }
     </tbody>
