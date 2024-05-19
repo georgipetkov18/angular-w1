@@ -1,3 +1,20 @@
-@for (item of rates; track $index) {
-    <p>{{item[0]}} - {{item[1]}}</p>
-}
+<div class="base">
+    Base: {{from}}
+</div>
+<div class="rates">
+    <div>
+        @for (item of ratesLeft; track $index) {
+        <p>{{item[0]}} - {{item[1]}}</p>
+        }
+    </div>
+    <div>
+        @for (item of ratesMiddle; track $index) {
+            <p>{{item[0]}} - {{item[1]}}</p>
+        }
+    </div>
+    <div>
+        @for (item of ratesRight; track $index) {
+            <p>{{item[0]}} - {{item[1]}}</p>
+        }
+    </div>
+</div>
