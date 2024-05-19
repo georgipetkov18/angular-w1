@@ -26,7 +26,11 @@ export class CurrenciesPageComponent implements OnInit, OnDestroy {
   }
 
   navigateToRates(code: string) {
-    this.router.navigate(['/rates'], {queryParams: {code: code}})
+    this.router.navigate(['/rates'], {queryParams: {code: code}});
+  }
+
+  navigateToConverter() {
+    this.router.navigate(['/converter']);
   }
   
   ngOnDestroy(): void {
