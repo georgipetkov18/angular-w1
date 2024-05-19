@@ -1,4 +1,7 @@
 <form #currencyForm="ngForm" (ngSubmit)="onSubmit()">
+    @if (errorMsg) {
+        <div class="error">{{errorMsg}}</div>
+    }
     <div>
         <label for="curr-from">From: </label>
         <select name="from" id="curr-from" [(ngModel)]="from">
@@ -19,7 +22,7 @@
 
     <div>
         <label for="amount">Amount: </label>
-        <input name="amount" id="amount" type="number" [(ngModel)]="amount">
+        <input name="amount" id="amount" type="number" [(ngModel)]="amount" min="1">
     </div>
 
     <button type="submit">Convert</button>

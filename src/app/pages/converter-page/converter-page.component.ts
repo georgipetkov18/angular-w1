@@ -20,6 +20,7 @@ export class ConverterPageComponent implements OnInit, OnDestroy {
   public to: string = '';
   public amount: number = 1;
   public convertedResult: number | null = null;
+  public errorMsg: string | null = null;
 
   ngOnInit(): void {
     this.currencySub = this.currencyService.getCurrencies().subscribe(currencies => {
@@ -30,8 +31,21 @@ export class ConverterPageComponent implements OnInit, OnDestroy {
   }
 
   onSubmit() {
+    this.errorMsg = null;
     const fromCode = this.from.split(' - ')[0];
     const toCode = this.to.split(' - ')[0];
+
+    if (fromCode === toCode) {
+      this.errorMsg = 'Currencies must be different';
+      this.convertedResult = null;
+      return;
+    }
+
+    if (this.amount < 1) {
+      this.errorMsg = 'The amount must be at least 1';
+      this.convertedResult = null;
+      return;
+    }
     this.currencyService.convert(this.amount, fromCode, toCode).subscribe(res => {
       this.convertedResult = res.rates[toCode];
     });
@@ -40,6 +54,4 @@ export class ConverterPageComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.currencySub.unsubscribe();
   }
-
-
 }
