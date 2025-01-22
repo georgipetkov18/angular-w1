@@ -1,0 +1,12 @@
+.note-div {
+    border: 1px solid gray;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px 15px;
+}
+
+.summary-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}

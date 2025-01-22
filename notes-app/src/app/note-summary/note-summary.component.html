@@ -1,0 +1,10 @@
+<div class="note-div" (click)="onClick()">
+    <div><strong>{{note.title}}</strong></div>
+    <div>{{note.content}}</div>
+    @if (buttonsVisible) {
+        <div class="summary-buttons">
+            <button (click)="onDeleteClicked()">Изтрий</button>
+            <button (click)="onEditClicked()">Редактирай</button>
+        </div>
+    }
+</div>

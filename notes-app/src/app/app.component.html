@@ -1,0 +1,9 @@
+<div class="app-container">
+  <div class="left">
+    <app-note (onNoteSaved)="addNote($event)" [note]="selectednote"></app-note>
+  </div>
+
+  <div class="right">
+    <app-note-list [noteList]="noteList" (noteSelected)="onNoteSelected($event)"></app-note-list>
+  </div>
+</div>
