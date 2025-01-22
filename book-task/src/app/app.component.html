@@ -1,0 +1,42 @@
+<section class="main-section" *ngIf="index !== books.length">
+  <div>
+    <span><strong>Заглавие: </strong>{{books[index].title}}</span>
+    <input type="text" name="title" (input)="onInput($event)">
+  </div>
+  <div>
+    <span><strong>Автор: </strong>{{books[index].author}}</span>
+    <input type="text" name="author" (input)="onInput($event)">
+  </div>
+  <div>
+    <span><strong>Описание: </strong>{{books[index].description}}</span>
+    <input type="text" name="description" (input)="onInput($event)">
+  </div>
+  <div>
+    <strong>Рейтинг: </strong>{{books[index].rating || 'Все още няма зададен рейтинг'}}
+  </div>
+  <br>
+
+  <div class="rating">
+    <button (click)="rateBook($event)">1</button>
+    <button (click)="rateBook($event)">2</button>
+    <button (click)="rateBook($event)">3</button>
+    <button (click)="rateBook($event)">4</button>
+    <button (click)="rateBook($event)">5</button>
+  </div>
+  <br>
+
+  <button (click)="displayNextBook()">Запази</button>
+</section>
+
+<section class="end-section" *ngIf="index === books.length && !showFinishedSection">
+  <h1>Вие оценихте всички книги успешно</h1>
+  <div class="button-container">
+    <button class="end-buttons" (click)="onContinue()">Искам да ги оценя отново</button>
+    <button class="end-buttons" (click)="onFinished()">Не ок съм</button>
+  </div>
+
+</section>
+
+<section class="finished-section" *ngIf="showFinishedSection">
+  <h1>Благодаря, че оценихте нашите книги</h1>
+</section>
