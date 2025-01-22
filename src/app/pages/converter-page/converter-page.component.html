@@ -1,0 +1,32 @@
+<form #currencyForm="ngForm" (ngSubmit)="onSubmit()">
+    @if (errorMsg) {
+        <div class="error">{{errorMsg}}</div>
+    }
+    <div>
+        <label for="curr-from">From: </label>
+        <select name="from" id="curr-from" [(ngModel)]="from">
+            @for (item of currencies; track $index) {
+            <option>{{item.code}} - {{item.name}}</option>
+            }
+        </select>
+    </div>
+
+    <div>
+        <label for="curr-to">To: </label>
+        <select name="to" id="curr-to" [(ngModel)]="to">
+            @for (item of currencies; track $index) {
+            <option>{{item.code}} - {{item.name}}</option>
+            }
+        </select>
+    </div>
+
+    <div>
+        <label for="amount">Amount: </label>
+        <input name="amount" id="amount" type="number" [(ngModel)]="amount" min="1">
+    </div>
+
+    <button type="submit">Convert</button>
+</form>
+@if (convertedResult) {
+    <div class="result">Result: {{convertedResult}}</div>
+}

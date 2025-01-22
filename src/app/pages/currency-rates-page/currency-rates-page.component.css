@@ -1,0 +1,14 @@
+.base {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.rates {
+    display: flex;
+    justify-content: center;
+    column-gap: 150px;
+}

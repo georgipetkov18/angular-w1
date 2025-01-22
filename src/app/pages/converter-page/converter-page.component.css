@@ -1,0 +1,19 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    justify-content: start;
+    margin-top: 50px;
+}
+
+.result{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.error {
+    color: red;
+}
