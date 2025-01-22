@@ -1,0 +1,26 @@
+.vertical-traffic-lights-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 100px;
+}
+
+.horizontal-light {
+    display: flex;
+    justify-content: center;
+}
+
+.emergency-btn {
+    color: red;
+    outline: 2px solid red;
+    border: none;
+    background-color: transparent;
+    height: 40px;
+    width: 150px;
+    cursor: pointer;
+}
+
+.emergency-btn:disabled {
+    cursor: default;
+    opacity: 0.5;
+}

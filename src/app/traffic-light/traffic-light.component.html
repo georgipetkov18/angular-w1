@@ -1,0 +1,13 @@
+<div [classList]="isHorizontal ? 
+    (reversed ? 'container-horizontal-reversed' : 'container-horizontal') : 
+    (reversed ? 'container-vertical-reversed' : 'container-vertical')">
+    <button 
+        [classList]="isHorizontal ? 'cross-btn cross-btn-h' : 'cross-btn cross-btn-v'" 
+        [disabled]="light === 'r'"
+        (click)="onCrossBtnClicked()">Пресечи</button>
+    <div [classList]="isHorizontal ? 'traffic-light-container-horizontal' : 'traffic-light-container-vertical'">
+        <div [classList]="light === 'r' ? 'light red-light-on' : 'light red-light-off'"></div>
+        <div [classList]="light === 'y' ? 'light yellow-light-on' : 'light yellow-light-off'"></div>
+        <div [classList]="light === 'g' ? 'light green-light-on' : 'light green-light-off'"></div>
+    </div>
+</div> 
